@@ -32,7 +32,7 @@ The environment is fully containerized via Docker. It features a custom **RViz2*
 ```bash
 mkdir -p ~/your_folder/src
 cd ~/your_folder/src
-git clone [https://github.com/rprakapovich/tb3_flatland.git](https://github.com/rprakapovich/tb3_flatland.git)
+git clone https://github.com/rprakapovich/tb3_flatland.git
 ```
 2. Navigate to the docker directory and build the container:
 

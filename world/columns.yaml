@@ -1,0 +1,91 @@
+bodies:
+  - name: one_one
+    pose: [1.1, 1.1, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1
+  - name: one_two
+    pose: [1.1, 0, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1        
+  - name: one_three
+    pose: [1.1, -1.1, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1
+  - name: two_one
+    pose: [0, 1.1, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1
+  - name: two_two
+    pose: [0, 0, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1        
+  - name: two_three
+    pose: [0, -1.1, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1
+  - name: three_one
+    pose: [-1.1, 1.1, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1
+  - name: three_two
+    pose: [-1.1, 0, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1        
+  - name: three_three
+    pose: [-1.1, -1.1, 0]
+    type: static
+    color: [0, 0, 0, 0]
+    footprints:
+      - type: circle
+        radius: 0.15        
+        center: [0, 0]     
+        layers: [static, sensor]
+        density: 1                     

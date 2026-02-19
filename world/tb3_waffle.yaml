@@ -1,0 +1,90 @@
+bodies:
+
+  - name: base_link
+    enabled: true
+    pose: [0, 0, 0]
+    type: dynamic
+    color: [0.8, 0.4, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [robot, sensor]
+        points: [[0.077, 0.153], [0.077, -0.153], [-0.205, -0.153], [-0.205, 0.153]]
+
+  - name: wheel_left
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [robot, sensor]
+        points: [[0.033, 0.008], [0.033, -0.008], [-0.033, -0.008], [-0.033, 0.008]]
+
+  - name: wheel_right
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [robot, sensor]
+        points: [[0.033, 0.008], [0.033, -0.008], [-0.033, -0.008], [-0.033, 0.008]]        
+
+  - name: scan_link
+    pose: [-0.064, 0, 0]
+    type: dynamic
+    color: [0.66, 0.38, 0.2, 1]
+    footprints:
+      - type: circle
+        radius: 0.035        
+        center: [0, 0]     
+        layers: [robot, sensor]
+        density: 1
+
+joints: 
+  - type: weld
+    name: wheel_left_weld
+    bodies: 
+      - name: wheel_left
+        anchor: [0, 0]
+      - name: base_link
+        anchor: [0, 0.1935]
+
+  - type: weld
+    name: wheel_right_weld
+    bodies: 
+      - name: wheel_right
+        anchor: [0, 0]
+      - name: base_link
+        anchor: [0, -0.1935]
+
+  - type: weld
+    name: scan_link_weld
+    bodies: 
+      - name: scan_link
+        anchor: [0, 0]
+      - name: base_link
+        anchor: [-0.064, 0]        
+
+plugins:
+  - type: DiffDrive
+    name: diff_drive
+    body: base_link
+    odom_frame_id: odom
+    odom_pub: odom          
+    twist_sub: cmd_vel     
+    pub_rate: 50.0
+
+  - type: Laser
+    name: laser_scanner
+    frame: laser
+    topic: scan
+    body: base_link
+    broadcast_tf: true
+    origin: [-0.064, 0, 0]
+    range: 10.0
+    angle:
+      min: -3.14159
+      max: 3.14159
+      increment: 0.0174533
+    noise_std_dev: 0.01
+    update_rate: 10
+    layers:
+      - static

@@ -1,0 +1,48 @@
+bodies:
+  - name: left_up
+    pose: [1.8, 2.7, 0]
+    type: static
+    color: [0.0, 0.0, 0.0, 0]
+    footprints:
+      - type: polygon
+        points: [[0.7939, 0.0],[0.3969, -0.6875], [-0.3969, -0.6875], [-0.7939, 0.0], [-0.3969, 0.6875], [0.3969, 0.6875]]
+        density: 1.0
+        layers:
+          - static
+          - sensor
+
+  - name: left_down
+    pose: [-1.8, 2.7, 0]
+    type: static
+    color: [0.0, 0.0, 0.0, 0]
+    footprints:
+      - type: polygon
+        points: [[0.7939, 0.0],[0.3969, -0.6875], [-0.3969, -0.6875], [-0.7939, 0.0], [-0.3969, 0.6875], [0.3969, 0.6875]]
+        density: 1.0
+        layers:
+          - static
+          - sensor
+
+  - name: right_up
+    pose: [1.8, -2.7, 0]
+    type: static
+    color: [0.0, 0.0, 0.0, 0]
+    footprints:
+      - type: polygon
+        points: [[0.7939, 0.0],[0.3969, -0.6875], [-0.3969, -0.6875], [-0.7939, 0.0], [-0.3969, 0.6875], [0.3969, 0.6875]]
+        density: 1.0
+        layers:
+          - static
+          - sensor
+
+  - name: right_down
+    pose: [-1.8, -2.7, 0]
+    type: static
+    color: [0.0, 0.0, 0.0, 0]
+    footprints:
+      - type: polygon
+        points: [[0.7939, 0.0],[0.3969, -0.6875], [-0.3969, -0.6875], [-0.7939, 0.0], [-0.3969, 0.6875], [0.3969, 0.6875]]
+        density: 1.0
+        layers:
+          - static
+          - sensor

@@ -1,0 +1,67 @@
+bodies:
+  - name: top_right
+    pose: [2.2084, -1.275, -0.5236]
+    type: static
+    color: [0.0, 0.0, 0.0, 0.0]
+    footprints:
+      - type: polygon
+        points: [[0.01, 1.4722],[0.01, -1.4722], [0.0, -1.4722], [0.0, 1.4722]]
+        density: 1.0
+        layers:
+          - static
+          - sensor
+  - name: right
+    pose: [0, -2.55, -1.5708]
+    type: static
+    color: [0.0, 0.0, 0.0, 0.0]
+    footprints:
+      - type: polygon
+        points: [[0.01, 1.4722],[0.01, -1.4722], [0.0, -1.4722], [0.0, 1.4722]]
+        density: 1.0
+        layers:
+          - static
+          - sensor
+  - name: bottom_right
+    pose: [-2.2084, -1.275, -2.6180]
+    type: static
+    color: [0.0, 0.0, 0.0, 0.0]
+    footprints:
+      - type: polygon
+        points: [[0.01, 1.4722],[0.01, -1.4722], [0.0, -1.4722], [0.0, 1.4722]]
+        density: 1.0
+        layers:
+          - static       
+          - sensor             
+  - name: bottom_left
+    pose: [-2.2084, 1.275, 2.6180]
+    type: static
+    color: [0.0, 0.0, 0.0, 0.0]
+    footprints:
+      - type: polygon
+        points: [[0.01, 1.4722],[0.01, -1.4722], [0.0, -1.4722], [0.0, 1.4722]]
+        density: 1.0
+        layers:
+          - static 
+          - sensor          
+  - name: left
+    pose: [0, 2.55, 1.5708]
+    type: static
+    color: [0.0, 0.0, 0.0, 0.0]
+    footprints:
+      - type: polygon
+        points: [[0.01, 1.4722],[0.01, -1.4722], [0.0, -1.4722], [0.0, 1.4722]]
+        density: 1.0
+        layers:
+          - static      
+          - sensor          
+  - name: top_left
+    pose: [2.2084, 1.275, 0.5236]
+    type: static
+    color: [0.0, 0.0, 0.0, 0.0]
+    footprints:
+      - type: polygon
+        points: [[0.01, 1.4722],[0.01, -1.4722], [0.0, -1.4722], [0.0, 1.4722]]
+        density: 1.0
+        layers:
+          - static     
+          - sensor                   

@@ -1,0 +1,12 @@
+bodies:
+  - name: head
+    pose: [0, 0, 0]
+    type: static
+    color: [0.0, 0.0, 0.0, 0]
+    footprints:
+      - type: polygon
+        points: [[1.4434, 0.0],[0.7217, -1.25], [-0.7217,  -1.25], [-1.4434, 0.0], [-0.7217, 1.25], [0.7217, 1.25]]
+        density: 1.0
+        layers:
+          - static
+          - sensor

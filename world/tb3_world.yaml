@@ -1,0 +1,23 @@
+properties: {}
+
+layers:
+  - name: static   
+  - name: robot
+  - name: sensor
+
+models:
+  - model: border.yaml
+    name: border
+    pose: [0, 0, 0]
+
+  - model: head.yaml
+    name: head
+    pose: [3.5, 0, 0]
+
+  - model: paws.yaml
+    name: paws
+    pose: [0, 0, 0]
+
+  - model: columns.yaml
+    name: columns
+    pose: [0, 0, 0]

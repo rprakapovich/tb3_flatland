@@ -28,7 +28,7 @@ The environment is fully containerized via Docker. It features a custom **RViz2*
 **Prerequisites:**
 * Docker installed on your host machine.
 
-1. Create a workspace and clone the repository:
+1. Create an isolated  workspace for ROS2 and clone the repository:
 ```bash
 mkdir -p ~/your_folder/src
 cd ~/your_folder/src

@@ -1,0 +1,83 @@
+bodies:
+
+  # ── Outer walls (6 m × 3.5 m rectangle) ──────────────────────────────────
+  - name: bottom
+    pose: [3.0, 0.0, 0]
+    type: static
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [static, sensor]
+        points: [[-3.0, 0.01], [3.0, 0.01], [3.0, -0.01], [-3.0, -0.01]]
+
+  - name: right
+    pose: [6.0, 1.75, 0]
+    type: static
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [static, sensor]
+        points: [[-0.01, -1.75], [0.01, -1.75], [0.01, 1.75], [-0.01, 1.75]]
+
+  - name: top
+    pose: [3.0, 3.5, 0]
+    type: static
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [static, sensor]
+        points: [[-3.0, 0.01], [3.0, 0.01], [3.0, -0.01], [-3.0, -0.01]]
+
+  - name: left
+    pose: [0.0, 1.75, 0]
+    type: static
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [static, sensor]
+        points: [[-0.01, -1.75], [0.01, -1.75], [0.01, 1.75], [-0.01, 1.75]]
+
+  # ── Inner walls (4 m × 1.5 m, corners at x=1..5, y=1..2.5) ───────────────
+  - name: bottom_inner
+    pose: [3.0, 1.0, 0]
+    type: static
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [static, sensor]
+        points: [[-2.0, 0.01], [2.0, 0.01], [2.0, -0.01], [-2.0, -0.01]]
+
+  - name: right_inner
+    pose: [5.0, 1.75, 0]
+    type: static
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [static, sensor]
+        points: [[-0.01, -0.75], [0.01, -0.75], [0.01, 0.75], [-0.01, 0.75]]
+
+  - name: top_inner
+    pose: [3.0, 2.5, 0]
+    type: static
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [static, sensor]
+        points: [[-2.0, 0.01], [2.0, 0.01], [2.0, -0.01], [-2.0, -0.01]]
+
+  - name: left_inner
+    pose: [1.0, 1.75, 0]
+    type: static
+    color: [0.2, 0.2, 0.2, 1]
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [static, sensor]
+        points: [[-0.01, -0.75], [0.01, -0.75], [0.01, 0.75], [-0.01, 0.75]]

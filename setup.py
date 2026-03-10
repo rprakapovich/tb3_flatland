@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
             'spawn_robot = tb3_flatland.spawn_robot:main',
             'spawn_world = tb3_flatland.marker_array_publish:main',
+            'umbreon_controller = tb3_flatland.umbreon_controller:main',
         ],
     },
 )

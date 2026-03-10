@@ -1,0 +1,11 @@
+properties: {}
+
+layers:
+  - name: static
+  - name: robot
+  - name: sensor
+
+models:
+  - model: roborace_track.yaml
+    name: track
+    pose: [0, 0, 0]

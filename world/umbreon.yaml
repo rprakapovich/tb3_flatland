@@ -1,0 +1,98 @@
+bodies:
+
+  - name: base_link
+    enabled: true
+    pose: [0, 0, 0]
+    type: dynamic
+    color: [0.3, 0.1, 0.6, 1]   # purple — Umbreon colour
+    footprints:
+      - type: polygon
+        density: 1
+        layers: [robot, sensor]
+        # 200 mm long × 150 mm wide, centred on axle
+        points: [[0.10, 0.075], [0.10, -0.075], [-0.10, -0.075], [-0.10, 0.075]]
+
+plugins:
+
+  # ── Drive ──────────────────────────────────────────────────────────────────
+  # DiffDrive approximates the bicycle (Ackermann) kinematics.
+  # The controller converts steer_cmd + speed → linear.x + angular.z.
+  - type: DiffDrive
+    name: diff_drive
+    body: base_link
+    odom_frame_id: odom
+    odom_pub: odom
+    twist_sub: cmd_vel
+    pub_rate: 50.0
+
+  # ── 4× Single-ray TF-Luna LiDAR ───────────────────────────────────────────
+  # All sensors are on the front bumper (x = +0.10 m from body centre).
+  # Positive y = left;  positive angle = counter-clockwise = left.
+  #
+  #  s[0]  L-Out   45° left,   7 cm left of centre
+  - type: Laser
+    name: s0
+    frame: s0_frame
+    topic: s0
+    body: base_link
+    broadcast_tf: true
+    origin: [0.10, 0.07, 0.7854]   # [x, y, angle_rad]
+    range: 8.0
+    angle:
+      min: 0.0
+      max: 0.0
+      increment: 0.01
+    update_rate: 25
+    layers:
+      - static
+
+  #  s[1]  L-Fwd   0° (straight), 3 cm left of centre
+  - type: Laser
+    name: s1
+    frame: s1_frame
+    topic: s1
+    body: base_link
+    broadcast_tf: true
+    origin: [0.10, 0.03, 0.0]
+    range: 8.0
+    angle:
+      min: 0.0
+      max: 0.0
+      increment: 0.01
+    update_rate: 25
+    layers:
+      - static
+
+  #  s[2]  R-Fwd   0° (straight), 3 cm right of centre
+  - type: Laser
+    name: s2
+    frame: s2_frame
+    topic: s2
+    body: base_link
+    broadcast_tf: true
+    origin: [0.10, -0.03, 0.0]
+    range: 8.0
+    angle:
+      min: 0.0
+      max: 0.0
+      increment: 0.01
+    update_rate: 25
+    layers:
+      - static
+
+  #  s[3]  R-Out   45° right,  7 cm right of centre
+  - type: Laser
+    name: s3
+    frame: s3_frame
+    topic: s3
+    body: base_link
+    broadcast_tf: true
+    origin: [0.10, -0.07, -0.7854]
+    range: 8.0
+    angle:
+      min: 0.0
+      max: 0.0
+      increment: 0.01
+    update_rate: 25
+    layers:
+      - static
